@@ -1,0 +1,19 @@
+# Internal build and visual-QA artifacts
+_docx_work/
+build/
+renders/
+qa/
+
+# Microsoft Office temporary/lock files
+~$*
+**/~$*
+*.tmp
+*.temp
+*.lock
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
