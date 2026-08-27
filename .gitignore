@@ -10,6 +10,7 @@ qa/
 *.tmp
 *.temp
 *.lock
+* (Security copy)
 
 # OS/editor noise
 Thumbs.db
