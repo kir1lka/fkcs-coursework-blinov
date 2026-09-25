@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подключение DC и общая схема — 25.09.2026</title>
+<style>
+body{margin:0;background:#f3f4f6;color:#202124;font:18px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1200px;margin:32px auto;padding:32px;background:white;border-radius:12px}
+h1{font-size:28px;line-height:1.3}h2{font-size:22px;margin-top:32px}
+code{background:#eef0f3;padding:2px 5px;border-radius:4px;font-size:.95em}
+li{margin:8px 0}img{display:block;width:100%;height:auto;border:1px solid #ddd}
+figure{margin:16px 0}figcaption{font-size:14px;color:#555;margin-top:6px}
+a{color:#165bb5}.date{color:#666;font-size:14px}
+@media(max-width:700px){main{margin:0;padding:18px;border-radius:0}body{font-size:16px}}
+@media print{body{background:white}main{margin:0;padding:0}figure{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<h1>Подключение DC и общая схема</h1>
+<p class="date">Сохранённый ответ от 25 сентября 2026 года. Картинки можно открыть в полном размере щелчком.</p>
+<p>На фото написано <strong>DC1 — дешифратор</strong>. У тебя он уже собран и называется <strong>HB3 / DC</strong>. Кружки вокруг — индикаторы <code>probes</code>, такие же, как у тебя над счётчиком.</p>
+<p>Для твоего варианта:</p>
+<ul>
+<li>Слева DC подключи к одноимённым выходам <code>Q0…Q3</code> и <code>NOT_Q0…NOT_Q3</code> счётчика.</li>
+<li>Справа поставь <strong>14 отдельных индикаторов</strong>: <code>Y0</code>, <code>Y2</code>…<code>Y14</code>. Можешь копировать уже имеющийся probe.</li>
+<li>Например, при коде <code>D</code> должен гореть <code>Y13</code>, при коде <code>6</code> — <code>Y6</code>.</li>
+</ul>
+<p>Переделал оформление по твоему скриншоту. Используй эти <strong>финальные версии</strong> — в промежуточных картинках в чате были ошибки проводки:</p>
+<h2>DC крупно — куда подключить индикаторы</h2>
+<figure><a href="DC.png"><img src="DC.png" alt="Подключение восьми входов DC и четырнадцати отдельных индикаторов"></a><figcaption>HB3 / DC и выходы Y0, Y2…Y14.</figcaption></figure>
+<h2>Общая схема — итоговый вид</h2>
+<figure><a href="Общая_схема.png"><img src="Общая_схема.png" alt="Общая схема с Logic_D, D_Counter, CLK_GEN, P_RES_GEN и DC"></a><figcaption>Финальная монтажная иллюстрация в стиле Multisim.</figcaption></figure>
+<p>На общей схеме <strong>зелёный — CLK, синий — P_RES, чёрный от переключателя — START_N</strong>. Красные толстые линии — шины: каждый сигнал подключай отдельным именованным отводом.</p>
+<p>Картинки созданы через ImageGen по твоим снимкам; это иллюстрации подключения, не настоящие скриншоты работающей модели.</p>
+</main></body>
+</html>
